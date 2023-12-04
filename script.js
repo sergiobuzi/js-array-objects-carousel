@@ -105,6 +105,16 @@ function(){
             //aggiungo la classe active all'elemento successivo
             imgSelector[activeItem].classList.add('active');
 
+                      
+        //ciclo infinito
+        } else if (activeItem === images.length - 1) { 
+
+            imgSelector[activeItem].classList.remove('active');
+
+            activeItem = 0;
+
+            imgSelector[activeItem].classList.add('active');
+
         }
 
     }
@@ -128,6 +138,16 @@ back.addEventListener('click',
             activeItem--;
 
             //aggiungo la classe active all'elemento successivo
+            imgSelector[activeItem].classList.add('active');
+
+
+        //ciclo infinito
+        } else if (activeItem === 0) { 
+
+            imgSelector[activeItem].classList.remove('active');
+
+            activeItem = images.length -1;
+
             imgSelector[activeItem].classList.add('active');
 
         }
