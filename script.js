@@ -79,11 +79,11 @@ let imgSelector = document.getElementsByClassName("img-container");
 let activeItem = 0;
 
 
+
 //Se la flag e ferma a 0 allora do la classe active al primo ogetto dell'array
 if(activeItem === 0) {
     imgSelector[activeItem].classList.add('active');
 }
-
 
 
 //configuro il bottone next per andare avanti
@@ -91,9 +91,10 @@ const next = document.querySelector('.bottom');
 
 next.addEventListener('click',
 
-    function(){
+function(){
+    
 
-        if (activeItem < images.length - 1) {
+    if (activeItem < imgSelector.length - 1) {
 
             //tolgo la classe active all'immagine
             imgSelector[activeItem].classList.remove('active');
@@ -112,7 +113,6 @@ next.addEventListener('click',
 
 
 //configuro il bottone back per andare indietro
-
 const back = document.querySelector('.top');
 
 back.addEventListener('click',
@@ -122,13 +122,13 @@ back.addEventListener('click',
         if (activeItem > 0) {
 
             //tolgo la classe active dall'immagine
-            image[activeItem].classList.remove('active');
+            imgSelector[activeItem].classList.remove('active');
 
             //diminuisco l'indice dell'elemento da visualizzare
             activeItem--;
 
             //aggiungo la classe active all'elemento successivo
-            image[activeItem].classList.add('active');
+            imgSelector[activeItem].classList.add('active');
 
         }
 
