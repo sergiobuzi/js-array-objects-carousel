@@ -1,0 +1,73 @@
+/*macrostruttura*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    background-color: white;
+    width: 40%;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+p, h2 {
+    color: white;
+}
+
+
+/*configurazione immagine*/
+
+.img-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.active{
+    display: block;
+}
+
+/*configurazione bottone*/
+
+.button{
+    position: absolute;
+    font-size: 20px;
+    color: rgb(199, 199, 199);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.top{
+    top: 10px;
+    left: 50%;
+}
+
+.bottom{
+    bottom: 10px;
+    left: 50%;
+}
+
+.hidden{
+    display: none;
+}
