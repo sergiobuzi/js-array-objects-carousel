@@ -94,7 +94,7 @@ next.addEventListener('click',
 function(){
     
 
-    if (activeItem < imgSelector.length - 1) {
+    if (activeItem < images.length - 1) {
 
             //tolgo la classe active all'immagine
             imgSelector[activeItem].classList.remove('active');
