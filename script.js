@@ -48,9 +48,10 @@ const images = [
 
 
 
-
+//creo una variabile per box per appenderci la sezione con le immagini
 const image = document.querySelector('.box');
 
+//creo un ciclo che mi crei a sua volta i contenitori con gli oggetti all'interno
 images.forEach((element, index,) => {
     console.log(element, index,);
     
@@ -64,17 +65,26 @@ images.forEach((element, index,) => {
         </div>
         `
 
-    image.innerHTML+=card;
+    //inserisco i blocchi all'interno dell'html
+    image.innerHTML += card;
 
 });
 
 
-
-
+//creo una variabile che mi selezioni il conteiner dell'immagine
+let imgSelector = document.getElementsByClassName("img-container");
 
 
 //creo una flag e la imposto su 0
 let activeItem = 0;
+
+
+//Se la flag e ferma a 0 allora do la classe active al primo ogetto dell'array
+if(activeItem === 0) {
+    imgSelector[activeItem].classList.add('active');
+}
+
+
 
 //configuro il bottone next per andare avanti
 const next = document.querySelector('.bottom');
@@ -83,16 +93,16 @@ next.addEventListener('click',
 
     function(){
 
-        if (activeItem < image.length - 1) {
+        if (activeItem < images.length - 1) {
 
             //tolgo la classe active all'immagine
-            image[activeItem].classList.remove('active');
+            imgSelector[activeItem].classList.remove('active');
 
             //aumento l'indice dell'elemento da visualizzare
             activeItem++;
 
             //aggiungo la classe active all'elemento successivo
-            image[activeItem].classList.add('active');
+            imgSelector[activeItem].classList.add('active');
 
         }
 
